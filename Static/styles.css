@@ -1,0 +1,242 @@
+:root {
+  --primary-color: #4285F4;
+  --secondary-color: #007bff;
+  --text-color: #222;
+  --font-family: 'Roboto', sans-serif;
+  --container-padding: 20px;
+  --container-margin: 5%;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: var(--container-margin) auto;
+  padding: var(--container-padding);
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.question-container {
+  margin-bottom: 20px;
+}
+
+.question-heading {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.question-text {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.answer-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.answer-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.submit-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.submit-button:hover {
+  background-color: #3367D6;
+}
+
+.submit-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.5);
+}
+
+.progress-container {
+  width: 300px;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--secondary-color);
+  border-radius: inherit;
+  animation: progress 2s linear infinite;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.chat-container {
+  max-width: 600px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.ai-message,
+.user-message {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  text-decoration: none;
+  text-transform: none;
+  line-height: 1.6;
+  white-space: normal;
+  transition: background-color 0.3s ease;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.user-message {
+  background-color: #e2f0ff;
+  align-self: flex-end;
+}
+
+.ai-message:hover,
+.user-message:hover {
+  background-color: #aaa;
+}
+
+.typing-indicator {
+  display: none;
+  margin-bottom: 10px;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.dark-mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #555;
+}
+
+.dark-mode-toggle:focus {
+  outline: none;
+}
+
+.download-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.download-button:hover {
+  background-color: #3367D6;
+}
+
+.download-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.5);
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.navigation a {
+  margin: 0 10px;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #3367D6;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.footer a {
+  margin: 0 10px;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #3367D6;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    margin: 10% auto;
+    padding: 10px;
+  }
+}
